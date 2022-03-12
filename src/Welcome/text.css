@@ -1,0 +1,120 @@
+h1 {
+    color: #333;
+    font-family: tahoma;
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  
+    height: 100%;
+}
+
+h1 span {
+    font-size: 40px;
+    margin-left: 23px;
+}
+
+
+.message {
+    background-color: yellow;
+    color: #333;
+    display: block;
+    font-weight: 900;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.2rem;
+    top: 0.2rem;
+    left: 290px;
+    animation: openclose 5s ease-in-out infinite;
+}
+
+.word1, .word2 {
+    font-family: tahoma;
+}
+
+@keyframes openclose {
+    0% {
+        top: 0.2rem;
+        width: 0;
+    }
+
+    5% {
+        width: 0;
+    }
+
+    15% {
+        width:260px;
+    }
+
+    30% {
+        top: 0.2rem;
+        width:260px;
+    }
+
+    33% {
+        top: 0.2rem;
+        width:260px;
+    }
+
+    35% {
+        top: 0.2rem;
+        width:260px;
+    }
+
+    38% {
+        top: -4.5rem;
+
+    }
+
+    48% {
+        top: -4.5rem;
+        width: 260px;
+    }
+
+    62% {
+        top: -4.5rem;
+        width: 260px;
+    }
+
+    66% {
+        top: -4.5rem;
+        width: 0;
+        text-indent: 0;
+    }
+
+    71% {
+        top: -9rem;
+        width: 0;
+        text-indent: 5px;
+    }
+
+    86% {
+        top: -9rem;
+        width: 285px;
+    }
+
+    95% {
+        top: -9rem;
+        width: 285px;
+    }
+
+    98% {
+        top: -9rem;
+        width: 0;
+        text-indent: 5px;
+    }
+
+    100% {
+        top: 0;
+        width: 0;
+        text-indent: 0;
+    }
+}
+
+
