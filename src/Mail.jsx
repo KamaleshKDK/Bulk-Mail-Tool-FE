@@ -51,7 +51,7 @@ function Mail() {
           let payload = { email: tags, subject: subject, message: message };
 
           axios({
-            url: 'http://localhost:3030/mail',
+            url: 'https://bulk-mail-tool.herokuapp.com/mail',
             method: 'post',
             data: payload
           })
@@ -85,19 +85,19 @@ function Mail() {
                     <div className="animate-charcter">
                       <h4>{loading ? 'Sending...' : "Bulk Email"}</h4>
                       {
-                        loading && <img 
-                        src = {sending}
-                        alt = "loading..."
-                        style = {{
-                          color:"black",         
-                          position: "absolute",
-                          width : 300,
-                          height : 300,
-                          top: "50%",
-                          left: "82%",
-                          transform: "translate(-50%, -50%)"
-                        }}
-                      />
+                        loading && <img
+                          src={sending}
+                          alt="loading..."
+                          style={{
+                            color: "black",
+                            position: "absolute",
+                            width: 300,
+                            height: 300,
+                            top: "50%",
+                            left: "82%",
+                            transform: "translate(-50%, -50%)"
+                          }}
+                        />
 
                       }
                     </div>
@@ -122,7 +122,7 @@ function Mail() {
 
                         {/* Email */}
 
-                        
+
                         <div class="mb-3">
                           <label class="mb-2 text-muted email-text">E-Mail Address</label>
                           <input type="email"
