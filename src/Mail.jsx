@@ -74,7 +74,7 @@ function Mail() {
     return (
 
       <>
-        <div className="container shadow">
+        <div className="container">
           <div className="row position-absolute top-0 start-0">
             <div class="col-sm-8 ">
 
