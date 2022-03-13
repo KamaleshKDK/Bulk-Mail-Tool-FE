@@ -102,7 +102,7 @@ function Mail() {
                         {/* Subjects */}
 
                         <div class="mb-3">
-                          <label class="mb-2 text-muted subject-text">Subject</label>
+                          <label class="mb-2  subject-text">Subject</label>
                           <input
                             class="style-input form-control"
                             id="subject"
@@ -117,7 +117,7 @@ function Mail() {
                         {/* Email */}
 
                         <div class="mb-3">
-                          <label class="mb-2 text-muted email-text">E-Mail Address</label>
+                          <label class="mb-2 email-text">E-Mail Address</label>
                           <input type="email"
                             class="style-input form-control"
                             onKeyDown={addTag}
@@ -134,7 +134,7 @@ function Mail() {
                         {/* Compose Mail */}
 
                         <div class="mb-3">
-                          <label class="text-muted compose-text">Compose Mail</label>
+                          <label class="compose-text">Compose Mail</label>
                         </div>
 
 
