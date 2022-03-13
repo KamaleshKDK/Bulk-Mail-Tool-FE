@@ -1,14 +1,10 @@
-
-import PersonIcon from '@material-ui/icons/Person';
-import EmailIcon from '@material-ui/icons/Email';
-import SubjectIcon from '@material-ui/icons/Subject';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import sending from './img/sending.gif';
 import './mail.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -78,7 +74,7 @@ function Mail() {
           <div className="row position-absolute top-0 start-0">
             <div class="col-sm-8 ">
 
-              <form onSubmit={handleRequest} method="post">
+              <form onSubmit={handleRequest} method="POST">
                 <div className="form ms-1">
                   <div className="form__wrapper">
                     <div className="animate-charcter">
@@ -108,7 +104,7 @@ function Mail() {
                         <div class="mb-3">
                           <label class="mb-2 text-muted subject-text">Subject</label>
                           <input
-                            class="style-input form-control"                            
+                            class="style-input form-control"
                             id="subject"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
