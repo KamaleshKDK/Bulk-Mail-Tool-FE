@@ -90,10 +90,10 @@ function Mail() {
                           style={{
                             color: "black",
                             position: "absolute",
-                            width: 300,
-                            height: 300,
+                            width: 320,
+                            height: 320,
                             top: "50%",
-                            left: "82%",
+                            left: "72%",
                             transform: "translate(-50%, -50%)"
                           }}
                         />
