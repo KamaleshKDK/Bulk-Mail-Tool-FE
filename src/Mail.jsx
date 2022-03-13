@@ -21,7 +21,7 @@ function Mail() {
     // Tag Code Lines
 
     const addTag = (e) => {
-      if (e.key === " ") {
+      if (e.key === ",") {
         if ((e.target.value.length > 0)) {
           setTags([...tags, e.target.value]);
           e.target.value = [];
