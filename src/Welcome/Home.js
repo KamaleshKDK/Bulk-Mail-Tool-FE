@@ -8,7 +8,7 @@ import Text from './Text';
 function Home() {
     return (
         <>
-        <img className='backgroung-img' src={background} alt="backgound image"/>
+        <img className='backgroung-img'  src={background} alt="backgound image"/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">

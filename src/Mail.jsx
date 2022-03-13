@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import sending from './img/sending.gif';
 import './mail.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -74,8 +74,7 @@ function Mail() {
     return (
 
       <>
-        {/* Tag  */}
-        <div className="container">
+        <div className="container shadow">
           <div className="row position-absolute top-0 start-0">
             <div class="col-sm-8 ">
 
@@ -108,9 +107,8 @@ function Mail() {
 
                         <div class="mb-3">
                           <label class="mb-2 text-muted subject-text">Subject</label>
-                          <input type="email"
-                            class="style-input form-control"
-                            // onKeyDown={addTag}
+                          <input
+                            class="style-input form-control"                            
                             id="subject"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
@@ -121,7 +119,6 @@ function Mail() {
                         </div>
 
                         {/* Email */}
-
 
                         <div class="mb-3">
                           <label class="mb-2 text-muted email-text">E-Mail Address</label>
@@ -200,10 +197,10 @@ function Mail() {
           </div>
 
 
-          {/* <div class="row justify-content-sm-center h-100 m-3 "> */}
+          <div class="row justify-content-sm-center h-100 m-3 ">
 
+          </div>
         </div>
-        {/* </div> */}
 
       </>
     )
