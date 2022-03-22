@@ -1,4 +1,4 @@
-import Mail from './Mail';
+import Mail from './MailForm/Mail';
 import Home from './Welcome/Home';
 import React from 'react';
 import {
@@ -6,7 +6,9 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Mailsent from './Mailsent';
+import Mailsent from '../src/MailForm/Mailsent';
+import Login from './Welcome/Auth pages/Login';
+import Registration from './Welcome/Auth pages/Registration';
 
 
 
@@ -15,10 +17,12 @@ import Mailsent from './Mailsent';
 function App() {
   return (
     <>
+      
       <BrowserRouter>
         <Routes>
         <Route path="/bulk-mailer" element={<Mail />} />
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Login/>} />
+        <Route path="/register" element={<Registration/>} />
         <Route path="/mail-sent" element={<Mailsent/>} />
         </Routes>
       </BrowserRouter>

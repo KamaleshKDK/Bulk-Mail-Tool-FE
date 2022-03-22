@@ -1,10 +1,10 @@
 import React from 'react'
-import './text.css'
+// import './text.css'
 
 function Text() {
     return (
         <>
-            <h1>
+            {/* <h1>
                 <span>Send Mail To</span>
                 <div className="message">
                     <div className="word1">Multiple</div>
@@ -12,7 +12,7 @@ function Text() {
                 </div>
 
             </h1>
-          
+           */}
         </>
     )
 }

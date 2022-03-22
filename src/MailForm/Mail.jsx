@@ -2,10 +2,11 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-import sending from './img/sending.gif';
-import './mail.css';
-import { useNavigate } from 'react-router-dom';
-
+import sending from '../img/sending.gif';
+import '../MailForm/mail.css';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Mail() {
@@ -54,12 +55,17 @@ function Mail() {
             .then(function (response) {
               // console.log(response);
               navigate('/mail-sent')
+              toast.success('Mail Send Successfully');
               // alert('Email Sent Successfully')
               setLoading(false)
               // window.location.reload()
             })
             .catch(function (error) {
               setLoading(false)
+              toast.error('Something went Wrong', {
+                position: "top-right",
+                autoClose: 6000
+              });
               console.log(error);
             });
         } else {
@@ -70,7 +76,9 @@ function Mail() {
     return (
 
       <>
+
         <div className="container">
+        <ToastContainer />
           <div className="row position-absolute top-0 start-0">
             <div class="col-sm-8 ">
 
@@ -107,8 +115,7 @@ function Mail() {
                             class="style-input form-control"
                             id="subject"
                             value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            required
+                            onChange={(e) => setSubject(e.target.value)}               
                             type="text"
                             placeholder="Add Subject"
                             required />
@@ -125,10 +132,9 @@ function Mail() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required={true}
-                            type="email"
                             placeholder="Enter Space to Add a Email (Required)"
                             name="email"
-                            required />
+                            />
                         </div>
 
                         {/* Compose Mail */}
