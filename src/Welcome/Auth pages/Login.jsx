@@ -20,15 +20,7 @@ function Login() {
             const url = "https://bulk-mail-tool.herokuapp.com/api/auth";
             const { data: res } = await axios.post(url, data);
             localStorage.setItem("token", res.data);
-            toast.success('Login Successfully', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
+            toast.success('Login Successfully');
             window.location = "/bulk-mailer";
         } catch (error) {
             if (error.response &&
