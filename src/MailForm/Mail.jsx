@@ -54,8 +54,8 @@ function Mail() {
           })
             .then(function (response) {
               // console.log(response);
-              navigate('/mail-sent')
               toast.success('Mail Send Successfully');
+              navigate('/mail-sent')
               // alert('Email Sent Successfully')
               setLoading(false)
               // window.location.reload()

@@ -114,10 +114,13 @@ function Registration() {
                         </div>
                         <div class="intro-content-wrapper">
                             <h1 class="intro-title ">Grow your Business with Bulk Email</h1>
-                            <p class="intro-text animate-charcter-home">to create Eye-Catching Visual Effect Machine</p> <a href="#!" class="btn btn-read-more">Read more</a>
+                            <p class="intro-text animate-charcter-home">to create Eye-Catching Visual Effect Machine</p> 
+                            <a href="https://nodemailer.com/usage/bulk-mail/" class="btn btn-read-more">Read more</a>
                         </div>
                         <div class="intro-section-footer">
-                            <na class="footer-nav"> <a href="#!">Facebook</a> <a href="#!">Twitter</a> <a href="#!">Gmail</a> </na>
+                            <na class="footer-nav">
+                                 {/* <a href="#!">Facebook</a> <a href="#!">Twitter</a> <a href="#!">Gmail</a>  */}
+                                 </na>
                         </div>
                     </div>
 

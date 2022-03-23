@@ -9,30 +9,50 @@ import 'react-toastify/dist/ReactToastify.css';
 function Login() {
     const [data, setData] = useState({ email: "", password: "" })
     const [error, setError] = useState("");
-
     const handleChange = ({ currentTarget: input }) => {
         setData({ ...data, [input.name]: input.value })
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const url = "https://bulk-mail-tool.herokuapp.com/api/auth";
             const { data: res } = await axios.post(url, data);
-            toast.success('Mail Send Successfully');
             localStorage.setItem("token", res.data);
+            toast.success('Login Successfully', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
             window.location = "/bulk-mailer";
         } catch (error) {
             if (error.response &&
                 error.response.status >= 400 &&
-                error.response.status <= 500) {
+                error.response.status <= 500)
+                toast.error("Email and Password is required.");
+                {
                 setError(error.response.data.message)
             }
         }
     }
     return (
         <>
-   <ToastContainer />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6 col-md-7 intro-section">
@@ -41,10 +61,10 @@ function Login() {
                         </div>
                         <div class="intro-content-wrapper">
                             <h1 class="intro-title animate-charcter-home">Welcome to Bulk Mail Tool !</h1>
-                            <p class="intro-text">You Can Send Mail to Multuple Recipients Easily and Safely</p> <a href="#!" class="btn btn-read-more">Read more</a>
+                            <p class="intro-text">You Can Send Mails to Multiple Recipients Easily in this Website</p>
+                            <a href="https://nodemailer.com/usage/bulk-mail/" class="btn btn-read-more">Read more</a>
                         </div>
                         <div class="intro-section-footer">
-                            <na class="footer-nav"> <a href="#!">Facebook</a> <a href="#!">Twitter</a> <a href="#!">Gmail</a> </na>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-5 form-section">
