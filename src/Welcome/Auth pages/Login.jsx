@@ -34,7 +34,7 @@ function Login() {
             if (error.response &&
                 error.response.status >= 400 &&
                 error.response.status <= 500)
-                toast.error("Email and Password is required.");
+                toast.error("Email or Password is Invalid");
                 {
                 setError(error.response.data.message)
             }
