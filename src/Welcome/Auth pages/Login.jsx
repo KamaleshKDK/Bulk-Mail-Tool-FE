@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import * as Yup from 'yup'
 
 function Login() {
     const [data, setData] = useState({ email: "", password: "" })
@@ -13,7 +13,10 @@ function Login() {
         setData({ ...data, [input.name]: input.value })
     };
 
-
+ const validationSchema = Yup.object({
+        email : Yup.string().email('Enter valid email').required('Email is required'),
+        password : Yup.string().required('Please Enter your password')
+    }) 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -62,7 +65,7 @@ function Login() {
                     <div class="col-sm-6 col-md-5 form-section">
                         <div class="login-wrapper">
                             <h2 class="login-title">Sign In</h2>
-                            <form onSubmit={handleSubmit}>
+                            <form  validationSchema = {validationSchema}  onSubmit={handleSubmit}>
                                 <div class="form-group"> <label for="email" class="sr-only">Email</label>
                                     <input
                                         type="email"
