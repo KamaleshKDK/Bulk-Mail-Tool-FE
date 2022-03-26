@@ -106,8 +106,11 @@ function Login() {
                                         Login
                                     </button>
                                 </div>
+                               
                             </form>
                             <p class="login-wrapper-footer-text">New User ?  <Link to='/register' class="text-reset">Signup here</Link></p>
+                            <div>Email : guest@gmail.com</div>
+                            <div>Password : Guest@123</div>
                         </div>
                     </div>
                 </div>
